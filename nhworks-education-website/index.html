@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NHworks | Your Learning Journey Starts Here</title>
+  <meta name="description" content="NHworks is an online learning platform for practical, career-focused courses in web development, programming, data science, design, business and digital marketing.">
+  <meta name="theme-color" content="#0f9d6b">
+  <script>document.documentElement.classList.add("js");</script>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Caveat:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- ============ HEADER ============ -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <a class="brand" href="#home" aria-label="NHworks home">
+        <img src="assets/icons/logo.svg" alt="" width="34" height="34">
+        <span class="brand-name">NHworks</span>
+      </a>
+
+      <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+        <ul class="nav-list">
+          <li><a class="nav-link is-active" href="#home">Home</a></li>
+          <li><a class="nav-link" href="#courses">Courses</a></li>
+          <li><a class="nav-link" href="#about">About</a></li>
+          <li><a class="nav-link" href="#resources">Resources</a></li>
+          <li><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+
+        <form class="search-form js-search-form" role="search" aria-label="Search courses">
+          <label class="visually-hidden" for="searchInput">Search courses and topics</label>
+          <input class="js-search-input" id="searchInput" type="search" placeholder="Search courses, topics..." autocomplete="off">
+          <button type="submit" aria-label="Search">
+            <img src="assets/icons/search.svg" alt="" width="18" height="18">
+          </button>
+        </form>
+
+        <div class="nav-actions">
+          <button class="btn-text" type="button" data-open-auth="login">Login</button>
+          <button class="btn btn-primary" type="button" data-open-auth="signup">Get Started</button>
+        </div>
+      </nav>
+
+      <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mainNav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="home" aria-labelledby="heroTitle">
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="pill hero-anim" style="--d:0ms">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11.5V16c0 1.5 3 3 6 3s6-1.500 6-3v-4.500"/></svg>
+            Learn Today. Build Tomorrow.
+          </p>
+          <h1 id="heroTitle" class="hero-anim" style="--d:80ms">Your Learning Journey <span class="text-gradient">Starts Here.</span></h1>
+          <p class="hero-lead hero-anim" style="--d:160ms">NHworks is your platform for high-quality online courses, practical skills and a better future. Learn at your own pace, from anywhere in the world.</p>
+          <div class="hero-actions hero-anim" style="--d:240ms">
+            <a class="btn btn-primary btn-lg" href="#courses" data-action="explore">Explore Courses
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <button class="btn btn-outline btn-lg" type="button" data-open-video>
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M7 4.500v15l13-7.500z"/></svg>
+              Watch Video
+            </button>
+          </div>
+
+          <ul class="highlights">
+            <li class="highlight hero-anim" style="--d:340ms">
+              <span class="icon-bubble"><img src="assets/icons/users.svg" alt="" width="22" height="22"></span>
+              <span><strong>Expert Instructors</strong><small>Learn from subject specialists</small></span>
+            </li>
+            <li class="highlight hero-anim" style="--d:420ms">
+              <span class="icon-bubble"><img src="assets/icons/laptop.svg" alt="" width="22" height="22"></span>
+              <span><strong>Flexible Learning</strong><small>Study anytime, anywhere</small></span>
+            </li>
+            <li class="highlight hero-anim" style="--d:500ms">
+              <span class="icon-bubble"><img src="assets/icons/award.svg" alt="" width="22" height="22"></span>
+              <span><strong>Career-Focused Skills</strong><small>Practical, project-based learning</small></span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="hero-visual">
+          <p class="scribble" aria-hidden="true">
+            Better Skills<br>Brighter Future
+            <svg viewBox="0 0 120 60" width="110" height="55" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M10 6c4 30 40 46 96 38"/><path d="M92 34l15 10-17 8"/></svg>
+          </p>
+          <div class="hero-photo">
+            <img src="assets/images/hero-student-education.jpg" alt="University student smiling with laptop and notebook studying in a bright modern campus lounge" width="600" height="600" fetchpriority="high">
+            <div class="hero-photo-glow" aria-hidden="true"></div>
+            <div class="hero-chip-badge">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <span>100% Practical &amp; Project-Based</span>
+            </div>
+          </div>
+
+
+          <button class="float-card story-card" type="button" data-open-video aria-label="Watch our story">
+            <span class="play"><svg viewBox="0 0 24 24" width="18" height="18" fill="#fff" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span>
+            <span>Watch<br>Our Story</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CATEGORIES ============ -->
+    <section class="section categories" id="categories" aria-labelledby="catTitle">
+      <div class="container split">
+        <div class="split-intro reveal">
+          <p class="eyebrow">Browse by subject</p>
+          <h2 id="catTitle">Popular Categories</h2>
+          <p>Choose from career-aligned disciplines tailored for real-world application.</p>
+          <button class="btn btn-outline" type="button" data-action="all-categories">View All Categories
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </button>
+        </div>
+        <ul class="category-grid" id="categoryGrid">
+          <li class="reveal" style="--i:0"><button class="category-card" type="button" data-category="Web Development"><span class="cat-icon c-blue"><img src="assets/icons/web.svg" alt="" width="26" height="26"></span><strong>Web Development</strong><small>Build modern web apps &amp; sites</small><span class="cat-count">3 Courses</span></button></li>
+          <li class="reveal" style="--i:1"><button class="category-card" type="button" data-category="Programming"><span class="cat-icon c-green"><img src="assets/icons/code.svg" alt="" width="26" height="26"></span><strong>Programming</strong><small>Python, Node.js &amp; core logic</small><span class="cat-count">2 Courses</span></button></li>
+          <li class="reveal" style="--i:2"><button class="category-card" type="button" data-category="Data Science"><span class="cat-icon c-sky"><img src="assets/icons/data.svg" alt="" width="26" height="26"></span><strong>Data Science</strong><small>Analytics, visual charts &amp; stats</small><span class="cat-count">1 Course</span></button></li>
+          <li class="reveal" style="--i:3"><button class="category-card" type="button" data-category="Design"><span class="cat-icon c-pink"><img src="assets/icons/design.svg" alt="" width="26" height="26"></span><strong>UI/UX Design</strong><small>Figma wireframes &amp; design systems</small><span class="cat-count">1 Course</span></button></li>
+          <li class="reveal" style="--i:4"><button class="category-card" type="button" data-category="Business"><span class="cat-icon c-green"><img src="assets/icons/business.svg" alt="" width="26" height="26"></span><strong>Business</strong><small>Analysis, processes &amp; strategy</small><span class="cat-count">1 Course</span></button></li>
+          <li class="reveal" style="--i:5"><button class="category-card" type="button" data-category="Digital Marketing"><span class="cat-icon c-violet"><img src="assets/icons/marketing.svg" alt="" width="26" height="26"></span><strong>Digital Marketing</strong><small>Campaigns, SEO &amp; performance</small><span class="cat-count">1 Course</span></button></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ COURSES ============ -->
+    <section class="section courses" id="courses" aria-labelledby="courseTitle">
+      <div class="container split split-courses">
+        <div class="split-intro reveal">
+          <p class="eyebrow">Featured catalog</p>
+          <h2 id="courseTitle">Most Popular Courses</h2>
+          <p>Curated courses with practical projects, verified curriculum topics, and self-paced progress.</p>
+          <button class="btn btn-primary" type="button" id="toggleCourses" aria-expanded="false">View All Courses
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </button>
+          <p class="fine-print">Catalog content reflects structured sample curricula and fee structures.</p>
+        </div>
+        <div class="course-area">
+          <div class="filter-bar" id="filterBar" role="group" aria-label="Filter courses by category"></div>
+          <p class="result-status" id="resultStatus" role="status" aria-live="polite"></p>
+          <div class="course-grid" id="courseGrid"></div>
+          <div class="empty-state" id="emptyState" hidden>
+            <h3>No courses match your search</h3>
+            <p>Try a different keyword or clear the filters to view all available courses.</p>
+            <button class="btn btn-outline" type="button" id="clearFilters">Clear search and filters</button>
+          </div>
+          <noscript><p class="empty-state">JavaScript is required to display the course catalog.</p></noscript>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ABOUT / BENEFITS ============ -->
+    <section class="section benefits" id="about" aria-labelledby="benefitTitle">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Why NHworks</p>
+          <h2 id="benefitTitle">Learning Built Around Your Ambitions</h2>
+          <p>NHworks blends clear curriculum milestones with the freedom of self-paced study, ensuring measurable growth without unnecessary pressure.</p>
+        </div>
+
+        <div class="about-showcase">
+          <div class="about-hero-card reveal">
+            <div class="about-image-wrapper">
+              <img src="assets/images/about-learning-community.jpg" alt="Collaborative classroom with students working enthusiastically on laptops and digital displays" width="620" height="360" loading="lazy">
+              <div class="about-image-badge">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                <span>Collaborative, Project-Centric Environment</span>
+              </div>
+            </div>
+            <div class="about-card-copy">
+              <h3>Empowering Learners Across Diverse Disciplines</h3>
+              <p>Every module is designed around realistic workflows. Rather than passive video watching, you build tangible deliverables you can showcase to employers and clients.</p>
+              <ul class="about-card-list">
+                <li><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#059669" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Industry-relevant toolchains and modern standards</li>
+                <li><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#059669" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Hands-on exercises with immediate feedback loops</li>
+                <li><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#059669" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Clear progression paths from beginner to master</li>
+              </ul>
+            </div>
+          </div>
+
+          <ul class="benefit-grid">
+            <li class="benefit reveal" style="--i:0">
+              <span class="icon-bubble"><img src="assets/icons/clock.svg" alt="" width="24" height="24"></span>
+              <h3>Learn at Your Own Pace</h3>
+              <p>Pause, replay, and revisit lessons on your personal schedule with lifetime course access.</p>
+            </li>
+            <li class="benefit reveal" style="--i:1">
+              <span class="icon-bubble"><img src="assets/icons/tools.svg" alt="" width="24" height="24"></span>
+              <h3>Practice with Real Projects</h3>
+              <p>Each course is structured around hands-on portfolio milestones so your learning creates proof of skill.</p>
+            </li>
+            <li class="benefit reveal" style="--i:2">
+              <span class="icon-bubble"><img src="assets/icons/path.svg" alt="" width="24" height="24"></span>
+              <h3>Structured Learning Paths</h3>
+              <p>Follow logically ordered curriculums from fundamentals to advanced industry patterns.</p>
+            </li>
+            <li class="benefit reveal" style="--i:3">
+              <span class="icon-bubble"><img src="assets/icons/device.svg" alt="" width="24" height="24"></span>
+              <h3>Seamless Across Any Device</h3>
+              <p>Study uninterrupted on desktop, tablet, or smartphone without losing your place.</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ STATS / RESOURCES ============ -->
+    <section class="section stats" id="resources" aria-labelledby="statsTitle">
+      <div class="container stats-grid">
+        <div class="reveal">
+          <h2 id="statsTitle" class="h3">NHworks by the Numbers</h2>
+          <p class="muted">Live overview of our current course offerings and instructional resources.</p>
+        </div>
+        <ul class="stat-list reveal" id="statList">
+          <li><span class="stat-num"><span data-stat="courses">0</span></span><span class="stat-label">Courses available</span></li>
+          <li><span class="stat-num"><span data-stat="categories">0</span></span><span class="stat-label">Categories</span></li>
+          <li><span class="stat-num"><span data-stat="hours">0</span>h</span><span class="stat-label">Hours of lessons</span></li>
+          <li><span class="stat-num"><span data-stat="levels">0</span></span><span class="stat-label">Skill levels</span></li>
+        </ul>
+        <div class="limitless reveal">
+          <div class="limitless-media">
+            <img src="assets/images/workspace-modern-desk.jpg" alt="A modern cozy desk workspace with an ultrabook open to an educational video lecture, notebook and coffee" width="480" height="300" loading="lazy">
+          </div>
+          <div class="limitless-content">
+            <span class="eyebrow">Anytime Access</span>
+            <h3>Learn Without Limits</h3>
+            <p>Access your enrolled courses from any location, whenever motivation strikes. Every resource, code snippet, and lecture is always ready at your fingertips.</p>
+            <div class="limitless-actions">
+              <a class="btn btn-primary btn-sm" href="#courses">Explore All Courses</a>
+              <button class="btn btn-outline btn-sm" type="button" data-open-auth="signup">Create Free Account</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TESTIMONIALS + CTA ============ -->
+    <section class="section voices" aria-labelledby="testiTitle">
+      <div class="container voices-grid">
+        <div class="testimonials reveal">
+          <p class="eyebrow">Testimonials</p>
+          <h2 id="testiTitle">What Our Students Say</h2>
+          <p class="muted">Example learner stories that show the kind of experience we aim for. These are illustrative, not real reviews.</p>
+
+          <div class="carousel" id="carousel" aria-roledescription="carousel" aria-label="Student testimonials">
+            <div class="carousel-viewport" aria-live="polite">
+              <figure class="slide is-active" aria-roledescription="slide" aria-label="1 of 3">
+                <img src="assets/images/avatar-1.svg" alt="" width="56" height="56">
+                <blockquote>“The lessons are well structured and easy to follow. I built my first website within two weeks.”</blockquote>
+                <figcaption><strong>Ayesha K.</strong><span>Web Development learner</span><em class="tag-sample">Illustrative example</em></figcaption>
+              </figure>
+              <figure class="slide" aria-roledescription="slide" aria-label="2 of 3">
+                <img src="assets/images/avatar-2.svg" alt="" width="56" height="56">
+                <blockquote>“Short lessons and practical exercises fit around my work schedule, so I never fall behind.”</blockquote>
+                <figcaption><strong>Hamza R.</strong><span>Python learner</span><em class="tag-sample">Illustrative example</em></figcaption>
+              </figure>
+              <figure class="slide" aria-roledescription="slide" aria-label="3 of 3">
+                <img src="assets/images/avatar-3.svg" alt="" width="56" height="56">
+                <blockquote>“Working through real design briefs gave me a portfolio I felt proud to share.”</blockquote>
+                <figcaption><strong>Sana M.</strong><span>UI/UX Design learner</span><em class="tag-sample">Illustrative example</em></figcaption>
+              </figure>
+            </div>
+            <div class="carousel-controls">
+              <button type="button" class="circle-btn" id="prevSlide" aria-label="Previous testimonial"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg></button>
+              <div class="dots" id="dots"></div>
+              <button type="button" class="circle-btn" id="nextSlide" aria-label="Next testimonial"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="cta reveal">
+          <div class="cta-copy">
+            <p class="cta-eyebrow">Ready to get started?</p>
+            <h2>Join NHworks Today</h2>
+            <p>Gain new skills, advance your career and become part of a growing learning community.</p>
+            <button class="btn btn-light" type="button" data-open-auth="signup">Get Started Free</button>
+          </div>
+          <svg class="cta-art" viewBox="0 0 200 160" fill="none" aria-hidden="true">
+            <path d="M10 150C60 150 120 120 190 20" stroke="#2fd3a0" stroke-width="3" stroke-linecap="round" opacity=".7"/>
+            <path d="M100 40l62 26-62 26-62-26z" stroke="#fff" stroke-width="3" stroke-linejoin="round" fill="rgba(255,255,255,.08)"/>
+            <path d="M64 82v26c0 8 16 16 36 16s36-8 36-16V82" stroke="#fff" stroke-width="3" stroke-linejoin="round"/>
+            <path d="M162 66v34" stroke="#ffd166" stroke-width="3" stroke-linecap="round"/><circle cx="162" cy="106" r="5" fill="#ffd166"/>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="section contact" id="contact" aria-labelledby="contactTitle">
+      <div class="container contact-grid">
+        <div class="contact-info-col reveal">
+          <p class="eyebrow">Advising &amp; Support</p>
+          <h2 id="contactTitle">Questions about learning with NHworks?</h2>
+          <p class="muted">Tell us what skills you would like to build and we will recommend the ideal starting path for your career goals.</p>
+          
+          <div class="contact-cards-stack">
+            <div class="contact-info-card">
+              <span class="contact-icon"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></span>
+              <div>
+                <strong>Direct Email Support</strong>
+                <span>support@nhworks.edu</span>
+              </div>
+            </div>
+            <div class="contact-info-card">
+              <span class="contact-icon"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></span>
+              <div>
+                <strong>Response Window</strong>
+                <span>Under 24 hours (Mon &ndash; Fri)</span>
+              </div>
+            </div>
+            <div class="contact-info-card">
+              <span class="contact-icon"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></span>
+              <div>
+                <strong>Curriculum Format</strong>
+                <span>100% Self-Paced &bull; Lifetime Access</span>
+              </div>
+            </div>
+          </div>
+          <p class="fine-print">Demo note: this contact form is validated directly in your browser. Connect to an API endpoint or email service when deploying to production.</p>
+        </div>
+        <form class="form-card reveal" id="contactForm" novalidate>
+          <h3 class="form-card-title">Send Us a Message</h3>
+          <p class="form-card-sub">We will respond with personalised course recommendations.</p>
+          <div class="field"><label for="cName">Full name</label><input id="cName" name="name" type="text" autocomplete="name" placeholder="e.g. Alex Morgan" required><span class="error" aria-live="polite"></span></div>
+          <div class="field"><label for="cEmail">Email address</label><input id="cEmail" name="email" type="email" autocomplete="email" placeholder="alex@example.com" required><span class="error" aria-live="polite"></span></div>
+          <div class="field"><label for="cMsg">Message</label><textarea id="cMsg" name="message" rows="4" placeholder="Tell us about your learning goals or questions..." required minlength="10"></textarea><span class="error" aria-live="polite"></span></div>
+          <button class="btn btn-primary btn-block" type="submit">Send Message</button>
+          <p class="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand-col">
+        <a class="brand brand-light" href="#home" aria-label="NHworks home">
+          <img src="assets/icons/logo.svg" alt="" width="32" height="32">
+          <span class="brand-name">NHworks</span>
+        </a>
+        <p class="footer-desc">Practical, career-focused online learning platform designed to help motivated learners build job-ready digital and technical capabilities.</p>
+        <div class="footer-tag-wrap">
+          <span class="footer-tag">Learn &bull; Grow &bull; Succeed</span>
+        </div>
+      </div>
+
+      <div class="footer-links-col">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#courses">Courses Catalog</a></li>
+          <li><a href="#about">Why NHworks</a></li>
+          <li><a href="#resources">Learning Resources</a></li>
+          <li><a href="#contact">Advising &amp; Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links-col">
+        <h4>Popular Categories</h4>
+        <ul>
+          <li><a href="#courses" data-category="Web Development">Web Development</a></li>
+          <li><a href="#courses" data-category="Programming">Python &amp; Programming</a></li>
+          <li><a href="#courses" data-category="Data Science">Data Science</a></li>
+          <li><a href="#courses" data-category="Design">UI/UX Design</a></li>
+          <li><a href="#courses" data-category="Digital Marketing">Digital Marketing</a></li>
+          <li><a href="#courses" data-category="Business">Business Analysis</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links-col">
+        <h4>Platform Quality</h4>
+        <ul class="footer-features">
+          <li><span>&check;</span> Project-based assignments</li>
+          <li><span>&check;</span> Real-world toolchains</li>
+          <li><span>&check;</span> Self-paced flexible schedules</li>
+          <li><span>&check;</span> Transparent sample catalog</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p class="copyright">&copy; <span id="year">2026</span> NHworks Education. All rights reserved.</p>
+      <div class="footer-bottom-links">
+        <span>Curriculum Web &bull; Client-Side Validated</span>
+      </div>
+    </div>
+  </footer>
+
+  <button class="to-top" id="toTop" type="button" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+  </button>
+
+  <!-- ============ MODALS ============ -->
+  <div class="modal" id="courseModal" role="dialog" aria-modal="true" aria-labelledby="cmTitle" hidden>
+    <div class="modal-backdrop" data-close></div>
+    <div class="modal-panel modal-wide">
+      <button class="modal-close" type="button" data-close aria-label="Close dialog">&times;</button>
+      <div class="cm-grid">
+        <div class="cm-media"><img id="cmImage" src="" alt="" width="640" height="400"></div>
+        <div class="cm-body">
+          <p class="eyebrow" id="cmCategory"></p>
+          <h2 id="cmTitle"></h2>
+          <p id="cmDesc"></p>
+          <ul class="meta-row" id="cmMeta"></ul>
+          <h3 class="h4">What you will learn</h3>
+          <ul class="learn-list" id="cmLearn"></ul>
+          <div class="cm-footer">
+            <strong class="price" id="cmPrice"></strong>
+            <button class="btn btn-primary" type="button" id="cmEnroll">Register interest</button>
+          </div>
+          <p class="fine-print">Enrollment and payment need a backend service, which is not connected in this demo.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="videoModal" role="dialog" aria-modal="true" aria-labelledby="vmTitle" hidden>
+    <div class="modal-backdrop" data-close></div>
+    <div class="modal-panel modal-wide">
+      <button class="modal-close" type="button" data-close aria-label="Close dialog">&times;</button>
+      <div class="story">
+        <h2 id="vmTitle">Our Story</h2>
+        <div class="story-stage" id="storyStage">
+          <div class="story-slide is-active"><span class="story-step">1</span><h3>Learn</h3><p>Pick a course that matches your goals and start with clear, bite-sized lessons.</p></div>
+          <div class="story-slide"><span class="story-step">2</span><h3>Practice</h3><p>Apply every concept in hands-on projects so skills stick.</p></div>
+          <div class="story-slide"><span class="story-step">3</span><h3>Grow</h3><p>Build a portfolio, gain confidence and take your next step in your career.</p></div>
+        </div>
+        <div class="story-controls">
+          <button class="btn btn-outline btn-sm" type="button" id="storyPrev">Previous</button>
+          <span id="storyCount" aria-live="polite">1 / 3</span>
+          <button class="btn btn-primary btn-sm" type="button" id="storyNext">Next</button>
+        </div>
+        <p class="fine-print">A full video is not included yet. Add your own file to <code>assets/video/</code> and see the README for how to connect it.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="authModal" role="dialog" aria-modal="true" aria-labelledby="authTitle" hidden>
+    <div class="modal-backdrop" data-close></div>
+    <div class="modal-panel">
+      <button class="modal-close" type="button" data-close aria-label="Close dialog">&times;</button>
+      <div class="auth-tabs" role="tablist" aria-label="Account options">
+        <button type="button" role="tab" id="tabLogin" data-mode="login" aria-selected="true">Login</button>
+        <button type="button" role="tab" id="tabSignup" data-mode="signup" aria-selected="false">Get Started</button>
+      </div>
+      <h2 id="authTitle">Welcome back</h2>
+      <p class="muted" id="authLead">Enter your details to log in.</p>
+      <form id="authForm" novalidate>
+        <div class="field" data-for="signup"><label for="aName">Full name</label><input id="aName" name="name" type="text" autocomplete="name"><span class="error" aria-live="polite"></span></div>
+        <div class="field"><label for="aEmail">Email address</label><input id="aEmail" name="email" type="email" autocomplete="email" required><span class="error" aria-live="polite"></span></div>
+        <div class="field"><label for="aPass">Password</label><input id="aPass" name="password" type="password" autocomplete="current-password" minlength="8" required><span class="error" aria-live="polite"></span></div>
+        <div class="field" data-for="signup"><label for="aInterest">What would you like to learn?</label>
+          <select id="aInterest" name="interest"><option value="">Choose a category</option></select></div>
+        <button class="btn btn-primary btn-block" type="submit" id="authSubmit">Log in</button>
+        <p class="form-status" role="status" aria-live="polite"></p>
+      </form>
+     
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
